@@ -1,4 +1,4 @@
-import requests, json, time, datetime
+import requests, json, time, datetime, random
 from bs4 import BeautifulSoup as bs
 
 
@@ -112,7 +112,7 @@ class Sniper():
 						atcCall(this,)
 				elif rr.status_code==500:
 					print(now()+" [TASK {}] < [INFO] ATC failed, retrying after delay...".format(task_id))
-					time.sleep(retrydelay)
+					time.sleep(this.retrydelay)
 				elif rr.status_code in [502,503,504]:
 					print(now()+" [TASK {}] < [INFO] Request crashed, retrying in %s " % str(this.retrydelay))
 					time.sleep(this.retrydelay)
