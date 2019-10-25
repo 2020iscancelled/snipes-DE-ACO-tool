@@ -1,6 +1,8 @@
 # snipes-DE-ACO-tool
 Autocheckout via Cash in Advance on SnipesDE
 
+Works on Snipes DE only, should be ez to change it so that other regions work aswell
+
 Install following python modules:
 requests, bs4, json, time, datetime
 
@@ -14,6 +16,8 @@ Save your shipping data
 If there are any issues, fix them yourself, i wrote it in around half an hour out of pure boredom, not looking to work anymore on it, as i dont really care.
 
 Have fun
+
+
 
 Dont ask me pls hOw dO i UsE it
 https://pasteboard.co/IDDDHBP.png
