@@ -15,5 +15,5 @@ If there are any issues, fix them yourself, i wrote it in around half an hour ou
 
 Have fun
 
-
+Dont ask me pls hOw dO i UsE it
 https://pasteboard.co/IDDDHBP.png
