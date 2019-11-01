@@ -1,4 +1,4 @@
-import requests, json, time, datetime, random
+import requests, json, time, datetime
 from bs4 import BeautifulSoup as bs
 
 
@@ -102,7 +102,7 @@ class Sniper():
 					"options": json.dumps([{"optionId":"color","selectedValueId":"black/white/power red"},{"optionId":this.sizeId,"selectedValueId":this.size}]),
 					"quantity": "1",
 				}
-				rr=s.post("https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Cart-AddProduct?format=ajax", headers=this.atcHeader, data=this.Data,proxies=s.proxies)
+				rr=s.post("https://www.snipes.com/add-product?format=ajax", headers=this.atcHeader, data=this.Data,proxies=s.proxies)
 				if rr.status_code==200:
 					if rr.json()['message']=="Hinzugefügt":
 						print(now()+" [TASK {}] < [INFO] Added to cart.".format(task_id))
@@ -120,7 +120,9 @@ class Sniper():
 				else:
 					print(now()+" [TASK {}] < [INFO] ATC Failed, unknown reason {}".format(task_id,rr.status_code))
 			except Exception as e:
-				print()
+				print(now()+f" [TASK {task_id}] < [INFO] Exception {e} occurred")
+				time.sleep(this.retrydelay)
+				atcCall(this)
 		atcCall(this)
 
 
