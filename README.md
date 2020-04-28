@@ -21,3 +21,5 @@ Have fun
 
 Dont ask me pls hOw dO i UsE it
 https://pasteboard.co/IDDDHBP.png
+
+**UPDATE**: Due to some security changes, the repo is not mantained anymore and I have no interest of opensourcing any solutions.
